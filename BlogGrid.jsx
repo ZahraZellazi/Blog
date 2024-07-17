@@ -1,7 +1,7 @@
 
 import '../Styles/BlogGrid.css';
 
-// Sample blog data
+
 const blogs = [
   {
     id: 1,
