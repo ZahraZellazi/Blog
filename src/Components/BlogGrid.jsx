@@ -12,7 +12,7 @@ const blogs = [
   },
   {
     id: 2,
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFHxqnLamOX8_IXz61OhVjsorCVJePEXFPLw&s', // Replace with your image paths
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFHxqnLamOX8_IXz61OhVjsorCVJePEXFPLw&s', 
     title: "Game or international tournament, Whether it's an away",
     author: 'Nour',
     time: '2h ago',
@@ -49,21 +49,22 @@ const blogs = [
 
 const BlogGrid = () => {
   return (
-    <div className="container">
-      <h2 className="title">Popular Blogs</h2>
-      <div className="grid">
-        {blogs.map((blog) => (
-          <div className="card" key={blog.id}>
-            <img className="image" src={blog.image} alt={blog.title} />
-            <div className="content">
-              <h3 className="blog-title">{blog.title}</h3>
-              <div className="author">By {blog.author}</div>
-              <div className="time">{blog.time}</div>
-            </div>
-          </div>
-        ))}
+    
+<div className="blog-grid">
+  {blogs.map((blog) => (
+    <div className="blog-card" key={blog.id}>
+      <img src={blog.image} alt={blog.title} />
+      <div className="blog-content">
+        <h3>{blog.title}</h3>
+        <p>{blog.description}</p>
+        <div className="blog-meta">
+          <span className="blog-author">{blog.author}</span>
+          <span className="blog-time">{blog.time}</span>
+        </div>
       </div>
     </div>
+  ))}
+</div>
   );
 };
 
