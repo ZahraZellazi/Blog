@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FaFacebook, FaGoogle, FaLinkedin } from 'react-icons/fa';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import '../Styles/SignIn.css';
+import '../Styles/SignIn.scss';
 
 const SignIn = ({ onSwitch }) => {
   const [email, setEmail] = useState('');

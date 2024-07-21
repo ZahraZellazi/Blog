@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
+
+$background-color: #ffffff;
+$primary-gradient: linear-gradient(to right, #4e9ddd, rgb(53, 120, 196), #3663be);
+$font-family: "Montserrat", sans-serif;
+$box-shadow: 0 0px 5px rgb(53, 120, 196), 0 10px 10px rgba(0, 0, 0, 0.22);
+$input-background: #eee;
+$link-color: #007BFF;
+$error-color: red;
+$input-border-radius: 20px;
+$container-border-radius: 20px;
+$border-color: rgb(255, 255, 255);
+$icon-color: rgb(53, 120, 196);
+
+body {
+  background: $background-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: $font-family;
+  height: 100vh;
+  margin: -20px 0 50px;
+}
+
+.wrapperU {
+  display: flex;
+}
+
+.form-containerU {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  width: 100%; 
+}
+
+.containerU {
+  box-shadow: $box-shadow;
+  padding: 50px;
+  width: 400px;
+  height: 580px;
+  max-width: 100%;
+  text-align: center;
+  background-color: $background-color;
+  border-top-right-radius: $container-border-radius;
+  border-bottom-right-radius: $container-border-radius;
+  border-top-left-radius: $container-border-radius;
+  border-bottom-left-radius: $container-border-radius;
+}
+
+.social-containerU {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  .socialU {
+    border: 1px solid $background-color;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    height: 40px;
+    width: 40px;
+    color: #333;
+    font-size: 20px;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $background-color;
+
+      &.facebook {
+        color: #3b5998;
+      }
+
+      &.google {
+        color: #db4437;
+      }
+
+      &.linkedin {
+        color: #0e76a8;
+      }
+    }
+  }
+}
+
+.inputU {
+  background-color: $input-background;
+  border: 1px solid $border-color;
+  outline: none;
+  border-radius: $input-border-radius;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+
+  &:focus {
+    border: 2px solid rgb(53, 120, 196);
+  }
+
+  &.error {
+    border-color: $error-color;
+  }
+}
+
+.link {
+  color: $link-color;
+  font-size: 14px;
+  text-decoration: none;
+  display: block;
+  margin: 7px 0;
+}
+
+.titleU {
+  font-weight: bold;
+  font-size: 42px;
+  margin: 0 0 20px;
+  background: $primary-gradient;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.buttonU {
+  border-radius: $input-border-radius;
+  border: 1px solid transparent;
+  background: $primary-gradient;
+  color: $background-color;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 0.1s ease;
+  cursor: pointer;
+
+  &:active,
+  &:hover {
+    transform: scale(1.15);
+    text-decoration: underline;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .containerU {
+    border-radius: $container-border-radius;
+  }
+
+  .wrapperU::after {
+    font-size: 24px;
+    color: $icon-color;
+    display: inline-block;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+}
+
+.content {
+  background: $primary-gradient;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: $icon-color;
+  margin: 0 100px 20px 0;
+  display: inline-block; 
+}
+
+.icon {
+  color: $icon-color; 
+  vertical-align: middle; 
+  margin-left: 5px; 
+}
+
+.error-message {
+  color: $error-color;
+  font-size: 8px;
+  font-weight: bold;
+}

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FaFacebook, FaGoogle, FaLinkedin } from 'react-icons/fa';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import '../Styles/SignUp.css';
+import '../Styles/SignUp.scss';
 
 const SignUp = ({ onSwitch }) => {
     //set kol variable as an empty string and fct setName to update it
